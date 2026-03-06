@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Etiquetas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="library/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Login de Usuario  -->
+    <div id="login" class="container mt-5">
+
+        <div class="card p-4 shadow mx-auto" style="width:350px">
+            <h4 class="text-center">Ingresa tus Datos</h4>
+            <input type="text" id="nombre" class="form-control mb-2" placeholder="Nombre">
+            <input type="text" id="apellido" class="form-control mb-2" placeholder="Apellido">
+            <select id="genero" class="form-control mb-3">
+                <option value="">Seleccione género</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+            <button onclick="ingresarDatos()" class="btn btn-primary w-100">
+                Ingresar
+            </button>
+        </div>
+    </div>
+
+    <!-- Desarrollo del Blog -->
+    <div id="blog" class="container mt-4" style="display:none;">
+        <h2 id="mensaje" class="alert alert-secundary text-center"></h2>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"> Blog de Aprendizaje </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pagina">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="pagina">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contenido">Etiquetas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section text-center text-white py-5">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Domina las Etiquetas HTML</h1>
+            <p class="lead">20 etiquetas fundamentales explicadas paso a paso.</p>
+            <a href="#contenido" class="btn btn-light text-primary-blue fw-bold rounded-pill px-4 mt-3">Empezar a
+                Aprender</a>
+        </div>
+    </header>
+
+
+    <main id="contenido" class="container py-5">
+        <div class="row">
+            <aside class="col-lg-3 mb-4">
+                <div class="sticky-sidebar p-4 bg-white rounded shadow-sm">
+                    <h5 class="fw-bold text-primary-blue mb-3">Categorías</h5>
+                    <ul class="nav flex-column category-menu">
+                        <li><a class="nav-link" href="#estructurales">1. Estructurales</a></li>
+                        <li><a class="nav-link" href="#texto">2. De Texto</a></li>
+                        <li><a class="nav-link" href="#multimedia">3. Multimedia</a></li>
+                        <li><a class="nav-link" href="#formularios">4. Formularios</a></li>
+                        <li><a class="nav-link" href="#tablas">5. Tablas</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="col-lg-9">
+
+                <div id="estructurales" class="mb-5 categoria-seccion">
+                    <h2 class="fw-bold text-primary-blue border-bottom pb-2 mb-4">1. Etiquetas Estructurales</h2>
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;header&gt;</h4>
+                                    <p><strong>Explicación:</strong> Define la cabecera de una página o sección.
+                                        Generalmente contiene logo, título, menú de navegación o introducción..</p>
+                                    <p><strong>Uso:</strong>Se utiliza para mostrar la parte superior del sitio web.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;header&gt;
+&lt;h1&gt;Sena&lt;/h1&gt;
+&lt;p&gt;Sofia Plus&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;nav&gt;</h4>
+                                    <p><strong>Explicación:</strong> Contiene enlaces de navegación para el sitio web.
+                                    </p>
+                                    <p><strong>Uso:</strong> Se utiliza para crear un menú de navegación que permita al
+                                        usuario moverse por el sitio.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;nav&gt;
+&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;
+&lt;a href="#acercaDe"&gt;Acerca de&lt;/a&gt;
+&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;section&gt;</h4>
+                                    <p><strong>Explicación:</strong> Representa una sección temática del contenido.</p>
+                                    <p><strong>Uso:</strong>Sirve para dividir el contenido en partes organizadas.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;section&gt;
+&lt;h2&gt;Sena&lt;/h2&gt;
+&lt;p&gt;Sofia Plus&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;footer&gt;</h4>
+                                    <p><strong>Explicación:</strong> Define el pie de página de una página o sección.
+                                        Generalmente contiene información de copyright, enlaces a políticas de
+                                        privacidad o contactos.</p>
+                                    <p><strong>Uso:</strong> Se utiliza para mostrar información adicional al final del
+                                        sitio web.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;footer&gt;
+&lt;p&gt; 2026 Mi Web. Todos los derechos reservados.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="texto" class="mb-5 categoria-seccion">
+                    <h2 class="fw-bold text-primary-blue border-bottom pb-2 mb-4">2. Etiquetas de Texto</h2>
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;h1&gt; al &lt;h6&gt;</h4>
+                                    <p><strong>Explicación:</strong> Definen los encabezados del documento.</p>
+                                    <p><strong>Uso:</strong> Estructuran jerárquicamente la información (el h1 es el más
+                                        importante).</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <h4>Título Principal</h4>
+                                        <h5>Subtítulo</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;p&gt;</h4>
+                                    <p><strong>Explicación:</strong> Definen los párrafos de texto en el documento.</p>
+                                    <p><strong>Uso:</strong> Se utilizan para mostrar el contenido principal del sitio
+                                        web.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <p>Este es un párrafo de texto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;strong&gt;</h4>
+                                    <p><strong>Explicación:</strong> Indica que el texto tiene gran importancia.</p>
+                                    <p><strong>Uso:</strong> Se utiliza para resaltar palabras o frases importantes
+                                        dentro de un párrafo.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;strong&gt;Este es un texto en negrita.&lt;/strong&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <p><strong>Este es un texto en negrita.</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;i&gt;</h4>
+                                    <p><strong>Explicación:</strong>mostrar texto en cursiva (italic).</p>
+                                    <p><strong>Uso:</strong> Se utiliza normalmente para palabras extranjeras, términos técnicos, títulos o frases que se quieren destacar visualmente.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;i&gt;Este es un texto en cursiva.&lt;/i&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <i>Este es un texto en cursiva.</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="multimedia" class="mb-5 categoria-seccion">
+                    <h2 class="fw-bold text-primary-blue border-bottom pb-2 mb-4">3. Etiquetas Multimedia</h2>
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;img&gt;</h4>
+                                    <p><strong>Explicación:</strong> Inserta una imagen en el documento.</p>
+                                    <p><strong>Uso:</strong> Requiere el atributo src para la ruta y alt para el texto
+                                        alternativo.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;img src="library/assets/images/Adso.png" alt="Sena"&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <img src="library/assets/images/Adso.png" alt="Sena" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;video&gt;</h4>
+                                    <p><strong>Explicación:</strong> Permite reproducir videos directamente en la
+                                        página.</p>
+                                    <p><strong>Uso:</strong>Se utiliza para contenido audiovisual.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;video src="library/assets/videos/Millonario.mp4" controls&gt;&lt;/video&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <video src="library/assets/videos/Millonario.mp4" controls class="img-fluid">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;audio&gt;</h4>
+                                    <p><strong>Explicación:</strong> Permite reproducir audio directamente en la página.
+                                    </p>
+                                    <p><strong>Uso:</strong> Se utiliza para contenido de audio.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;audio controls&gt;
+&lt;source src="library/assets/audio/Music.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <audio controls>
+                                            <source src="library/assets/audio/Music.mp3" type="audio/mpeg">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;iframe&gt;</h4>
+                                    <p><strong>Explicación:</strong> Permite insertar contenido de otras páginas web.
+                                    </p>
+                                    <p><strong>Uso:</strong> Se utiliza para contenido de audio.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;iframe src="https://betowa.sena.edu.co/" controls&gt;&lt;/iframe&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <iframe src="https://betowa.sena.edu.co/" controls class="img-fluid">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="formularios" class="mb-5 categoria-seccion">
+                    <h2 class="fw-bold text-primary-blue border-bottom pb-2 mb-4">4. Formularios</h2>
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;input&gt;</h4>
+                                    <p><strong>Explicación:</strong> Campo de entrada de datos.</p>
+                                    <p><strong>Uso:</strong> Permite al usuario escribir texto, contraseñas, seleccionar
+                                        fechas, etc.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;input type="text" placeholder="Escribe un mensaje"&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <input type="text" class="form-control" placeholder="Escribe un mensaje">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;form&gt;</h4>
+                                    <p><strong>Explicación:</strong> Contenedor para agrupar elementos de formulario.
+                                    </p>
+                                    <p><strong>Uso:</strong> Permite organizar y estructurar los elementos de entrada
+                                        del usuario.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;form&gt;
+&lt;label for="nombre" class="form-label"&gt;Nombre&lt;label&gt;
+&lt;input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre"&gt;
+&lt;/form&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="nombre" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="nombre"
+                                                    placeholder="Escribe tu nombre">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;label&gt;</h4>
+                                    <p><strong>Explicación:</strong> Etiqueta que describe el propósito de un campo de
+                                        entrada.</p>
+                                    <p><strong>Uso:</strong> Mejora la accesibilidad y la experiencia del usuario al
+                                        proporcionar contexto para los campos de formulario.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;label for = "correo"&gt; Correo&lt;/label&gt;
+&lt;input type="email" id="correo" placeholder= "Escribe tu correo"&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="correo" class="form-label">Correo</label>
+                                                <input type="email" class="form-control" id="correo"
+                                                    placeholder="Escribe tu correo">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;button&gt;</h4>
+                                    <p><strong>Explicación:</strong> Elemento que actúa como un botón para enviar un
+                                        formulario o realizar una acción.</p>
+                                    <p><strong>Uso:</strong> Se utiliza para permitir que los usuarios interactúen con
+                                        el formulario de manera intuitiva.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></pre>
+                                    </div>
+                                    <div class="preview-box">
+                                        <form>
+                                            <div class="mb-3">
+                                                <button type="submit">Enviar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="tablas" class="mb-5 categoria-seccion">
+                    <h2 class="fw-bold text-primary-blue border-bottom pb-2 mb-4">5. Tablas</h2>
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;table&gt;</h4>
+                                    <p><strong>Explicación:</strong> Define una tabla de datos.</p>
+                                    <p><strong>Uso:</strong> Es el contenedor principal donde irán las filas y columnas.
+                                    </p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;table&gt;
+&lt;!-- filas y celdas --&gt;
+&lt;/table&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;tr&gt;</h4>
+                                    <p><strong>Explicación:</strong> Define una fila en una tabla.</p>
+                                    <p><strong>Uso:</strong> Se utiliza para crear filas dentro de una tabla.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;tr&gt;
+&lt;td&gt;Celda 1&lt;/td&gt;
+&lt;td&gt;Celda 2&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;th&gt;</h4>
+                                    <p><strong>Explicación:</strong> Define una celda de encabezado en una tabla.</p>
+                                    <p><strong>Uso:</strong> Se utiliza para crear celdas de encabezado dentro de una
+                                        fila de tabla.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;tr&gt;
+&lt;th&gt;Nombre&lt;/th&gt;
+&lt;th&gt;Edad&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4 reveal">
+                            <div class="card h-100 shadow-sm border-0 tag-card">
+                                <div class="card-body">
+                                    <h4 class="tag-title">&lt;td&gt;</h4>
+                                    <p><strong>Explicación:</strong> Define una celda de datos en una tabla.</p>
+                                    <p><strong>Uso:</strong> Se utiliza para crear celdas de datos dentro de una fila de
+                                        tabla.</p>
+                                    <button class="btn btn-outline-primary btn-sm mb-3"
+                                        onclick="mostrarCodigo(this)">Ver Código</button>
+                                    <div class="d-none code-container">
+                                        <pre><code>&lt;tr&gt;
+&lt;td&gt;Dato 1&lt;/td&gt;
+&lt;td&gt;Dato 2&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    
+
+    <footer class="bg-primary-blue text-white text-center py-4">
+        <p class="mb-0">Servicio Nacional de Aprendizaje SENA - Freinier Cardona / Brayan Perdomo</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="library/js/script.js"></script>
+    </div>
+
+</body>
+
+</html>

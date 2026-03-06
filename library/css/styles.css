@@ -1,0 +1,97 @@
+/* Estilo para el "Ingreso de datos" */
+body{
+background: #dfe9f5;
+}
+
+/* Paleta de Colores y Tipografía */
+:root {
+    --primary-blue: #0A2540;
+    --secondary-blue: #0073E6;
+    --light-blue: #E6F0FA;
+    --bg-color: #F8F9FA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+}
+
+/* Clases utilitarias personalizadas */
+.bg-primary-blue { background-color: var(--primary-blue) !important; }
+.text-primary-blue { color: var(--primary-blue) !important; }
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+}
+
+/* Sidebar estático */
+.sticky-sidebar {
+    position: sticky;
+    top: 90px;
+}
+.category-menu .nav-link {
+    color: #555;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+.category-menu .nav-link:hover {
+    background-color: var(--light-blue);
+    color: var(--secondary-blue);
+    font-weight: 600;
+}
+
+/* Estilos de las Tarjetas */
+.tag-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+.tag-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 115, 230, 0.1) !important;
+}
+.tag-title {
+    font-family: monospace;
+    color: var(--secondary-blue);
+    background: var(--light-blue);
+    padding: 5px 12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Cajas de Código y Preview */
+pre {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+.preview-box {
+    border: 2px dashed #B0C4DE;
+    padding: 15px;
+    border-radius: 8px;
+    background: #FFF;
+    margin-top: 15px;
+}
+
+/* Animaciones al hacer Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Desplazamiento suave general */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Evita que el navbar tape los títulos */
+}
+
+
+
