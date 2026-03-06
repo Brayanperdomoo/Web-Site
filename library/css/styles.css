@@ -60,7 +60,7 @@ body {
     display: inline-block;
 }
 
-/* Cajas de Código y Preview */
+/* Cajas de Código / Preview / Tablas */
 pre {
     background-color: #1E293B;
     color: #E2E8F0;
@@ -74,6 +74,17 @@ pre {
     border-radius: 8px;
     background: #FFF;
     margin-top: 15px;
+}
+
+.preview-box table {
+    border-collapse: collapse;
+}
+
+.preview-box table,
+.preview-box th,
+.preview-box td {
+    border: 1px solid #333;
+    padding: 6px 10px;
 }
 
 /* Animaciones al hacer Scroll */
